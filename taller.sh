@@ -1,9 +1,7 @@
 sudo apt update
-sudo apt-get install nodejs,npm,docker.io,cmake -y
+sudo apt-get install nodejs npm docker.io cmake -y
 # Juiceshop
 
-sudo apt-get install nodejs -y
-sudo apt-get install npm -y
 git clone https://github.com/juice-shop/juice-shop.git --depth 1
 cd juice-shop
 sudo npm install 
@@ -11,20 +9,19 @@ sudo npm start
 
 
 # NODESCAN
-#https://github.com/ajinabraham/nodejsscan
+# https://github.com/ajinabraham/nodejsscan
 
-sudo apt install docker.io
 sudo docker pull opensecurity/nodejsscan:latest
 sudo docker run -it -p 9090:9090 opensecurity/nodejsscan:latest
 
-zip -r juiceshop juiceshop
+# zip -r juiceshop juiceshop
 
 
 # openvas-scanner 
 
 https://github.com/greenbone/openvas-scanner
 
-sudo apt install cmake
 git clone https://github.com/greenbone/openvas-scanner.git
+cd openvas-scanner
 cmake .
 make install
